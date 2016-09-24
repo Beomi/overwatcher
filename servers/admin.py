@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import ServerInfo
+from .models import ServerNowStatus
+from .models import ServerStatus
+
+
+admin.site.register(ServerInfo)
+admin.site.register(ServerNowStatus)
+admin.site.register(ServerStatus)

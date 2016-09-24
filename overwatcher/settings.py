@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'custom_user',
+    'servers',
 ]
 
 MIDDLEWARE = [
@@ -55,8 +56,10 @@ ROOT_URLCONF = 'overwatcher.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [
+            os.path.join(BASE_DIR, "templates")
+        ],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -123,3 +126,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_dev"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+
+AUTH_USER_MODEL = 'custom_user.EmailUser'

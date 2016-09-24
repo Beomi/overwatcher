@@ -158,3 +158,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+#MAC
+.DS_Store
