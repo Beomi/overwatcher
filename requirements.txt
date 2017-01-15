@@ -1,2 +1,5 @@
+beautifulsoup4==4.5.3
+bs4==0.0.1
 Django==1.10.1
 django-custom-user==0.6
+requests==2.12.4
